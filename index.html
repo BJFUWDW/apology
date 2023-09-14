@@ -22,14 +22,13 @@
       </div>
       <div class="flex justify-center px-5 -mt-24 mb-5">
         <span class="block h-44 w-44">
-          <img class="mx-auto object-cover rounded-full bg-white p-1" src="img/picture.png" alt="Joan Grace">
+          <img class="mx-auto object-cover rounded-full bg-white p-1" src="img/miao.jpg" alt="Miao">
         </span>
       </div>
       <div class="px-7 mb-8">
-        <h1 class="text-6xl text-center font-bold text-pink-600 font-inter">I'am Sorry, Darl</h1>
+        <h1 class="text-6xl text-center font-bold text-pink-600 font-inter">I'am Sorry, 大喵🐱</h1>
         <h2 class="text-3xl mt-4 font-semibold text-pink-600 text-center">Never do it again</h2>
-        <p class="text-slate-500 text-xl text-center mt-10 italic">I'm very guilty for what I've done. So please forgive
-          me 🥺. <br> Thank you</p>
+        <p class="text-slate-500 text-xl text-center mt-10 italic">下次再也不这样了 别生气啦 🥺. <br> Thank you</p>
       </div>
     </div>
   </div>
@@ -68,8 +67,8 @@
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enabled = false;
 
-  camera.position.z = 5;
-  camera.position.x = 5;
+  camera.position.z = 4;
+  camera.position.x = 4;
   camera.position.y = -0.5;
 
   const ambientLight = new THREE.AmbientLight(0xffffff, 2);
@@ -79,23 +78,7 @@
   pointLight.position.set(50, 50, 50);
   scene.add(pointLight);
 
-  const loader = new GLTFLoader();
-  let heart;
 
-  loader.load('model/heart/scene.gltf', function (gltf) {
-    heart = gltf.scene;
-    // heart.scale.set(1, 1, 1);
-    scene.add(heart);
-  });
-
-  function animate() {
-    requestAnimationFrame(animate);
-    if (heart) {
-      heart.rotation.y += 0.01;
-    }
-    renderer.render(scene, camera);
-  }
-  animate();
 </script>
 
 </html>
